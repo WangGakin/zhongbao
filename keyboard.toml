@@ -47,8 +47,8 @@ LShift     X       C       V        B        N        M         F11    F12
 
 [[keymap.layer]] # layer 2
 keys = """
-SHIFTED(Kc4)   SHIFTED(Slash)   SHIFTED(Equal)   R     SHIFTED(Grave)     Quote       SHIFTED(Kc6)       SHIFTED(Backslash)     SHIFTED(Kc2)    SHIFTED(Minus)
-WM(Kc7, LShift)    Slash       Equal         LeftBracket    SHIFTED(Kc1)    SHIFTED(Quote)     SHIFTED(Kc3)    SHIFTED(Kc9)         SHIFTED(Kc0)      RightBracket
+SHIFTED(Kc4)   SHIFTED(Slash)   SHIFTED(Equal)   R     SHIFTED(Grave)     SHIFTED(Quote)       SHIFTED(Kc6)       SHIFTED(Backslash)     SHIFTED(Kc2)    SHIFTED(Minus)
+WM(Kc7, LShift)    Slash       Equal         LeftBracket    SHIFTED(Kc1)    Quote     SHIFTED(Kc3)    SHIFTED(Kc9)         SHIFTED(Kc0)      RightBracket
 LShift     SHIFTED(Kc8)   SHIFTED(LeftBracket)    SHIFTED(RightBracket)    SHIFTED(Kc5)      Grave    Minus      Comma     Backslash
          LCtrl      Delete     Space       No       Space     Enter      Home     End      PageUp      PageDown
 """
