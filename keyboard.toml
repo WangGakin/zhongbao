@@ -1,7 +1,7 @@
 # Documentation: https://rmk.rs/docs/configuration/
 [keyboard]
-name = "RMK Keyboard"
-product_name = "RMK Keyboard"
+name = "ZhongBao"
+product_name = "ZhongBao"
 vendor_id = 0x4c4b
 product_id = 0x4643
 manufacturer = "RMK"
