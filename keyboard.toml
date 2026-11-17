@@ -33,7 +33,7 @@ layers = 4
 keys = """
 Q        W         E         R         T          Y         U       I       O       P
 MT(A, LCtrl)    S       D      F       G          H         J       K       L       MT(Semicolon, LCtrl)
-MT(Z, LShift)    X        C        V        B          N         M       Comma      MT(LShift, Dot)
+MT(Z, LShift)    X        C        V        B          N         M       Comma      MT(Dot, RShift)
      MT(Esc, LAlt)     LT(1, Delete)     Space     LT(2, Backspace)     MT(Space, RGui)      Enter    Left  Right  Up   Down
 """
 
