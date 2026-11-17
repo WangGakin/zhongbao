@@ -33,24 +33,24 @@ layers = 4
 keys = """
 Q        W         E         R         T          Y         U       I       O       P
 MT(A, LCtrl)    S       D      F       G          H         J       K       L       MT(Semicolon, LCtrl)
-MT(Z, LShift)    X        C        V        B          N         M       Comma      Dot
-     MT(Esc, LAlt)     LT(1, Delete)     Space     LT(2, Backspace)     Space      Enter    Left  Right  Up   Down
+MT(Z, LShift)    X        C        V        B          N         M       Comma      MT(LShift, Dot)
+     MT(Esc, LAlt)     LT(1, Delete)     Space     LT(2, Backspace)     MT(Space, RGui)      Enter    Left  Right  Up   Down
 """
 
 [[keymap.layer]] # layer 1
 keys = """
-F1      F2      F3        F4       F5        F6       F7       F8       F9       F10
-Kc1    Kc2      Kc3     Kc4      Kc5       Kc6       Kc7       Kc8      Kc9      Kc0
-LShift     X       C       V        B        N        M         F11    F12
-    CapsWordToggle     No       Down       LAlt        Left        Down    Backspace  Delete  Tab  Esc
+F1      F2      F3        F4       F5        PgUp       NumLock       Kc7       Kc8      Kc9
+F6       F7       F8       F9       F10      PgDn        No           Kc4      Kc5       Kc6
+LShift     F11       F12       Esc        Home        End          Kc1       Kc2         Kc3
+    LCtrl     No             LAlt           Del              RGui            Kc0    Backspace  Delete  Tab  CapsLock
 """
 
 [[keymap.layer]] # layer 2
 keys = """
-SHIFTED(Kc4)   SHIFTED(Slash)   SHIFTED(Equal)   R     SHIFTED(Grave)     SHIFTED(Quote)       SHIFTED(Kc6)       SHIFTED(Backslash)     SHIFTED(Kc2)    SHIFTED(Minus)
+SHIFTED(Kc4)   SHIFTED(Slash)   SHIFTED(Equal)   Backslash     SHIFTED(Grave)     SHIFTED(Quote)       SHIFTED(Kc6)       SHIFTED(Backslash)     SHIFTED(Kc2)    SHIFTED(Minus)
 WM(Kc7, LShift)    Slash       Equal         LeftBracket    SHIFTED(Kc1)    Quote     SHIFTED(Kc3)    SHIFTED(Kc9)         SHIFTED(Kc0)      RightBracket
-LShift     SHIFTED(Kc8)   SHIFTED(LeftBracket)    SHIFTED(RightBracket)    SHIFTED(Kc5)      Grave    Minus      Comma     Backslash
-         LCtrl      Delete     Space       No       Space     Enter      Home     End      PageUp      PageDown
+Tab     SHIFTED(Kc8)   SHIFTED(LeftBracket)    SHIFTED(RightBracket)    SHIFTED(Kc5)      Grave    Minus      Comma     Backslash
+         LAlt      LCtrl     Backspace       No       RGui     Enter      Home     End      PageUp      PageDown
 """
 
 [behavior]
@@ -60,9 +60,24 @@ one_shot = { timeout = "1s" }
 # This default setting enables HRM with all tap-hold features
 enable_flow_tap = true
 prior_idle_time = "120ms"
-hold_on_other_press = true
+hold_on_other_press = false
 hold_timeout = "250ms"
-gap_timeout = "250ms"
+gap_timeout = "200ms"
+quick_tap_timeout = "70ms"
+
+[behavior.combo]
+timeout = "70ms"
+# prior_idle_time = "130ms"  # optional, prevents accidental triggers during fast typing
+combos = [
+  { actions = ["J", "D"], output = "Kc3" },
+  # Press J and other keys simultaneously to output Numbers, friendly to choose words
+  { actions = ["J", "F"], output = "Kc4" },
+  { actions = ["J", "G"], output = "Kc5" },
+  { actions = ["J", "W"], output = "Kc6" },
+  { actions = ["J", "E"], output = "Kc7" },
+  { actions = ["J", "R"], output = "Kc8" },
+  { actions = ["J", "I"], output = "Kc9" }
+]
 
 [host]
 vial_enabled = true
